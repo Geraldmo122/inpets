@@ -7,11 +7,16 @@ export const styles = StyleSheet.create({
     },
     image:{
         resizeMode:"contain",
-        height:300,
+        height:200,
         width:"100%",
-        marginBottom:40,
+        marginBottom:10,
     },
-
+    title1:{
+        marginTop:70,
+        fontWeight:"bold",
+        fontSize:40,
+        textAlign: "center",
+    },
     title:{
         fontWeight:"bold",
         fontSize:19,

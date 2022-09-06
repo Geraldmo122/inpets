@@ -16,13 +16,14 @@ export function UserGuestScreen() {
 
   return (
     <ScrollView centerContent={true} style={styles.content}>
+      <Text style={styles.title1}>InPets</Text>
       <Image 
         source={require("../../../../assets/img/perroygato.png")} 
         style={styles.image}
 
       />
       <Text style={styles.title}> Consultar tu Perfil de inPets</Text>
-      <Text style={styles.descripcion}> InPets aplicacion creada para los dueños mascotas y para realizar jjajlsjld jla sjjdklakjl adjs jdksakj adskjdkjakjdas kjadsklj dsa</Text>
+      <Text style={styles.descripcion}> InPets es una aplicación creada enfocada en los perros y gatos para que las personas que posean estos,  puedan efectuar un correcto cuidado a su mascota</Text>
       <Button
         title="Iniciar sesión"
         onPress={goToLogin}
