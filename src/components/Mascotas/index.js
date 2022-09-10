@@ -1,1 +1,5 @@
 export * from "./InfoUser"
+export * from "./MascotasOptions"
+export  * from "./ChangeDisplayNameForm"
+export * from "./ChangeEmailForm"
+export * from "./ChangePasswordForm"
