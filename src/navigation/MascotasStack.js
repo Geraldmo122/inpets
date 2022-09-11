@@ -15,7 +15,7 @@ export function MascotasStack() {
             <Stack.Screen 
             name= {screen.mascotas.mascotas} 
             component={MascotasScreen} 
-            options={{ title: "Mascotas" ,headerShown: false}} // Con headerShown: false, eliminamos la barra de arriba que dice Mascotas
+            options={{ title: "Cuenta" ,headerShown: false}} // Con headerShown: false, eliminamos la barra de arriba que dice Mascotas
             />
 
             <Stack.Screen 

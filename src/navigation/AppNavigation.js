@@ -4,7 +4,7 @@ import { MascotasStack} from "./MascotasStack";
 import { AlarmaStack} from "./AlarmaStack";
 import { ClinicasStack} from "./ClinicasStack";
 import { TipsStack} from "./TipsStack";
-
+import { MisMascotasStack } from "./MisMascotasStack"
 
 import{ screen} from "../utils"
 //Screens
@@ -26,10 +26,14 @@ export function AppNavigation() {
             <Tab.Screen 
             name={screen.mascotas.tab} 
             component={MascotasStack} 
-            options={{ title: "Mascotas"}} 
+            options={{ title: "Cuenta"}} 
             />
 
-     
+            <Tab.Screen 
+            name={screen.misMascotas.tab} 
+            component={MisMascotasStack} 
+            options={{ title: "Mis Mascotas"}} 
+            />
 
             <Tab.Screen 
             name={screen.alarmas.tab} 
@@ -57,6 +61,9 @@ function screenOptions(route, color, size){
     let iconName;
     
     if(route.name === screen.mascotas.tab){
+        iconName= "home-outline";
+    }
+    if(route.name === screen.misMascotas.tab){
         iconName= "home-outline";
     }
     

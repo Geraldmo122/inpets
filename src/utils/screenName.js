@@ -6,6 +6,13 @@ const mascotasStack = {
     register:"Register",
 };
 
+const misMascotasStack = {
+    tab: "MisMascotasTab",
+    misMascotas: "MisMascotas",
+    addMisMascotas: "AddMisMascotas",
+
+};
+
 const alarmasStack = {
     tab: "AlarmasTab",
     alarmas: "Alarmas",
@@ -26,6 +33,7 @@ export const screen = {
   mascotas: mascotasStack,  
   alarmas: alarmasStack,   
   clinicas: clinicasStack,  
-  tips: tipsStack,  
+  tips: tipsStack, 
+  misMascotas: misMascotasStack, 
 
 };
