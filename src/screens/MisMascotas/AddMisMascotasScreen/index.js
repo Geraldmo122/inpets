@@ -1,2 +1,2 @@
-export * from "./AddMisMascotas"
-export * from "./AddMisMascotas.styles"
+export * from "./AddMisMascotasScreen"
+export * from "./AddMisMascotasScreen.styles"

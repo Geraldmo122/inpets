@@ -1,14 +1,23 @@
 import React ,{ useState,useEffect} from 'react'
 import { View, Text , ScrollView} from 'react-native'
 import { Icon, Image, Button} from "react-native-elements"
-import { screen } from '../../../utils'
+import { screen, db } from '../../../utils'
 import { styles} from "./MisMascotasScreen.styles"
 import { getAuth, onAuthStateChanged} from "firebase/auth"
+import { collection, onSnapshot, orderBy, query} from "firebase/firestore"
+import { LoadingModal} from "../../../components/Shared"
+import { ListMisMascotas} from "../../../components/MisMascotas/ListMisMascotas"
+import { AddMisMascotasScreen} from "../AddMisMascotasScreen/AddMisMascotasScreen"
+
 
 export function MisMascotasScreen(props) {
   const {navigation} = props;
 
   const [currentUser, setCurrentUser] = useState(null)
+
+  const [misMascotas, setMisMascotas] = useState(null)
+  
+  //const uidUsuario=getAuth().currentUser.uid
 
   useEffect(() =>{
     const auth = getAuth()
@@ -17,6 +26,28 @@ export function MisMascotasScreen(props) {
     })
   }, [])
 
+
+ 
+  
+    const uidUsuario=getAuth().currentUser.uid
+
+    useEffect(() => {
+      
+      const q = query(
+        collection(db, uidUsuario),
+        orderBy("createdAt","desc")  
+      )
+
+      onSnapshot(q,(snapshot) => {
+        setMisMascotas(snapshot.docs)
+        
+      })
+      
+    }, [])
+  
+
+
+  
   const goToAddMisMascotas = () => {
 
     navigation.navigate(screen.misMascotas.addMisMascotas)
@@ -29,9 +60,17 @@ export function MisMascotasScreen(props) {
 
   return (
     <View style={styles.content}>
- 
+      {(!misMascotas || !currentUser )? (
+          
+          <Text>  </Text>
+        ):(
+          <ListMisMascotas misMascotas={misMascotas} />
+        )}
+       
       {currentUser && (
 
+
+        
         <Icon
           reverse
           type='material-community'
@@ -42,7 +81,7 @@ export function MisMascotasScreen(props) {
           />
           )}
       {!currentUser &&(
-        <ScrollView centerContent={true} style={styles.content1}>
+        <ScrollView centerContent={true} style={styles.content1} showsVerticalScrollIndicator={false}>
         <Text style={styles.title1}>InPets</Text>
         <Image 
           source={require("../../../../assets/img/perroygato.png")} 

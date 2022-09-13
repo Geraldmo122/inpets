@@ -10,6 +10,7 @@ const misMascotasStack = {
     tab: "MisMascotasTab",
     misMascotas: "MisMascotas",
     addMisMascotas: "AddMisMascotas",
+    miMascota:"MiMascota",
 
 };
 

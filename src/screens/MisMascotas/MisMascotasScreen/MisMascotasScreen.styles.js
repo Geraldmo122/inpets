@@ -11,6 +11,7 @@ export const styles = StyleSheet.create({
     },
     content1:{
         marginHorizontal:50,
+        marginBottom:20,
        
     },
     image:{
