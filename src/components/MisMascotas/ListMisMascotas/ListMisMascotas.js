@@ -25,6 +25,7 @@ export function ListMisMascotas(props) {
 
           return(
             <TouchableOpacity onPress={()=> goToMisMascotas(miMascota)}>
+              <Text style={styles.nameTitulo} >{miMascota.name}</Text>
               <View style={styles.content}>
                 <Image source={{uri:miMascota.images[0]}} style={styles.image}/>
                 <View>
@@ -32,7 +33,7 @@ export function ListMisMascotas(props) {
                   <Text style={styles.info}>{miMascota.tipoAnimal}</Text>
                   <Text style={styles.info}>{miMascota.raza}</Text>
                   <Text style={styles.info}>{miMascota.sexo}</Text>
-                  <Text style={styles.info}>{miMascota.description}</Text>
+                  <Text style={styles.info}>{miMascota.fechaNacimiento}</Text>
                 </View>
               </View>
 

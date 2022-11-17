@@ -23,7 +23,8 @@ export function UserGuestScreen() {
 
       />
       <Text style={styles.title}> Consultar tu Perfil de inPets</Text>
-      <Text style={styles.descripcion}> InPets es una aplicación creada enfocada en los perros y gatos para que las personas que posean estos,  puedan efectuar un correcto cuidado a su mascota</Text>
+      <Text style={styles.descripcion}> InPets es una aplicación móvil que ayuda a los dueños de perros y gatos con la correcta tenencia responsable de mascotas mediante diversas funcionalidades</Text>
+      <Text style={styles.descripcion}> Recuerda que debes iniciar sesión para poder agregar a tus mascotas</Text>
       <Button
         title="Iniciar sesión"
         onPress={goToLogin}
