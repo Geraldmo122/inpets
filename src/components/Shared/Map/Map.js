@@ -2,6 +2,7 @@ import React from 'react'
 import { View, Text } from 'react-native'
 import {styles} from "./Map.styles"
 import MapView  from "react-native-maps"
+
 import openMap from "react-native-open-maps"
 
 export function Map(props) {
@@ -20,7 +21,7 @@ export function Map(props) {
 
   return (
   
-    <MapView style={styles.content} initialRegion={location} onPress={openAppMap}>
-    </MapView>
+    0
+
   )
 }
