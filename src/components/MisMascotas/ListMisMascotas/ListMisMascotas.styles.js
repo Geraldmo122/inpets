@@ -3,7 +3,6 @@ import { StyleSheet} from "react-native"
 export const styles = StyleSheet.create({
     content:{
         flexDirection:"row",
-        marginTop:60,
         margin:10,
 
     },
@@ -12,8 +11,14 @@ export const styles = StyleSheet.create({
         height:80,
         marginRight:15,
     },
+    nameTitulo:{
+        fontWeight:"bold",
+        marginTop:20,
+        marginLeft:10,
+    },
     name:{
-        fontWeight:"bold"
+        fontWeight:"bold",
+
     },
     info:{
         color:"#828282",

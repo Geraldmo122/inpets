@@ -3,6 +3,7 @@ import { MascotasScreen} from "../screens/Mascotas/MascotasScreen";
 import { AddMascotasScreen} from "../screens/Mascotas/AddMascotasScreen"
 import { LoginScreen } from "../screens/Mascotas/LoginScreen"
 import { RegisterScreen} from "../screens/Mascotas/RegisterScreen"
+import { RecoverPassword} from "../screens/Mascotas/RecoverPassword"
 
 import { screen} from "../utils";
 
@@ -34,6 +35,11 @@ export function MascotasStack() {
             name= {screen.mascotas.addMascotas} 
             component={AddMascotasScreen} 
             options={{ title: "Nueva Mascota"}}
+            />
+            <Stack.Screen 
+            name= {screen.mascotas.recoverPassword} 
+            component={RecoverPassword} 
+            options={{ title: "Recuperar contraseña"}}
             />
 
         </Stack.Navigator>
