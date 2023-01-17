@@ -1,5 +1,5 @@
 import { createNativeStackNavigator} from "@react-navigation/native-stack";
-import { TipsScreen} from "../screens/TipsScreen";
+import {TipsScreen} from "../screens/Tips/TipsScreen";
 
 import { screen} from "../utils";
 

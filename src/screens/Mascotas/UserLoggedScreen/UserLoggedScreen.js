@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import { View, Text } from 'react-native'
+import { View, Text , Alert} from 'react-native'
 import { InfoUser, MascotasOptions } from "../../../components/Mascotas"
 import { styles} from "./UserLoggedScreen.styles"
 import { Button} from "react-native-elements"
@@ -20,6 +20,29 @@ export function UserLoggedScreen() {
     await signOut (auth);
   };
 
+  const twoOptionAlert=()=>{
+    Alert.alert(
+      //titulo
+      '¿Quieres cerrar sesión?',
+
+      //body
+      '¿Seguro?',
+      [
+        {
+          text:'Si',
+          onPress:(logout)
+        },
+        
+        {
+          text:'No',
+          onPress:()=>{
+            console.log('No')
+          }
+        }
+      ]
+    )
+  }
+
   return (
     <View style={styles.content}>
       <InfoUser setLoading={setLoading} setLoadingText={setLoadingText}/>
@@ -30,7 +53,7 @@ export function UserLoggedScreen() {
         title="Cerrar sesión" 
         buttonStyle={styles.buttonStyle}
         titleStyle={styles.btnTextStyle} 
-        onPress={logout}
+        onPress={twoOptionAlert}
       />
 
       <LoadingModal show={loading} text={loadingText}/>

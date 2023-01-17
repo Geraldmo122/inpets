@@ -4,6 +4,7 @@ const mascotasStack = {
     addMascotas: "AddMascotas",
     login:"Login",
     register:"Register",
+    recoverPassword:"RecoverPassword"
 };
 
 const misMascotasStack = {
@@ -22,6 +23,9 @@ const alarmasStack = {
 const clinicasStack = {
     tab: "ClinicasTab",
     clinicas: "Clinicas",
+    addClinicas: "AddClinicas",
+    clinica: "Clinica",
+    addReviewClinica:"AddReviewClinicaScreen",
     
 };
 
@@ -35,6 +39,7 @@ export const screen = {
   alarmas: alarmasStack,   
   clinicas: clinicasStack,  
   tips: tipsStack, 
-  misMascotas: misMascotasStack, 
+  misMascotas: misMascotasStack,
+  
 
 };

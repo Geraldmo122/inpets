@@ -8,7 +8,6 @@ export function initialValues(){
         fechaNacimiento:"",
         raza:"", 
         sexo:"",
-        description:"",
         images: []
     }
 }
@@ -20,7 +19,6 @@ export function validationSchema(){
         fechaNacimiento: Yup.string().required("Campo obligatorio"),
         raza: Yup.string().required("Campo obligatorio"),
         sexo: Yup.string().required("Campo obligatorio"),
-        description: Yup.string().required("Campo obligatorio"),
         images: Yup.array().min(1, "Se requiere una imagen de la mascota").required("La imagen es requerida"),
 
     })

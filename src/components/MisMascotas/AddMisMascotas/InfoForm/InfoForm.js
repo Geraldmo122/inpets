@@ -37,13 +37,7 @@ export function InfoForm(props) {
         errorMessage={formik.errors.sexo}
       />
 
-      <Input 
-        placeholder=' Descripcion de la mascota' 
-        multiline={true} 
-        inputContainerStyle={styles.textArea}
-        onChangeText={(text) => formik.setFieldValue("description",text)} 
-        errorMessage={formik.errors.description}
-      />
+ 
     </ScrollView>
   )
 }
